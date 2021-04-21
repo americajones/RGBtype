@@ -25,6 +25,7 @@ let down = true;
 let back = false;
 
 selectedHole.classList.add('selected');
+
 displayGreeting();
 
 function displayGreeting() {
@@ -749,7 +750,7 @@ function displayGreeting() {
     colums[54].childNodes[5].append(redNode66, emptyNode18, bluNode67);
 }
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keypress', function (e) {
     let redNode = document.createElement('div');
     redNode.classList.add('red');
     redNode.classList.add('line');
@@ -952,6 +953,10 @@ document.addEventListener('click', function (e) {
     } else if (e.target.classList.contains('downSwitch')) {
         down = !down;
         downSwitch.classList.toggle('rotate')
+    } else if (e.target.classList.contains('clear')) {
+        holes.forEach(hole => {
+            removeAllChildNodes(hole);
+        })
     }
     else {
         holes.forEach(hole => {
@@ -960,4 +965,5 @@ document.addEventListener('click', function (e) {
         })
     }
 
-})
+});
+
