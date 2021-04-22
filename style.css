@@ -1,11 +1,13 @@
 body {
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
-div {
+/* div {
     padding: 0;
     margin: 0;
-}
+} */
 #grid {
     display: flex;
     flex-direction: row;
@@ -88,4 +90,15 @@ div {
 .lowDot {
     height: 30%;
     width: 30%;
+}
+.key {
+    /* position: absolute; */
+    margin: auto;
+    margin-top: 3rem;
+}
+img.key {
+    width: 666px;
+}
+.hidden {
+    display: none;
 }

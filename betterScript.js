@@ -433,7 +433,8 @@ document.addEventListener('click', function (e) {
         holes.forEach(hole => {
             clear = !clear;
             hole.classList.toggle('border')
-        })
+        });
+        document.querySelector('.key').classList.toggle('hidden');
     }
 
 });
