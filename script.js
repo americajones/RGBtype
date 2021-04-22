@@ -910,6 +910,19 @@ document.addEventListener('keypress', function (e) {
     }
 });
 
+// function addRedNode(parent) {
+//     let redNode = document.createElement('div');
+//     redNode.classList.add('red');
+//     redNode.classList.add('line');
+//     let emptyNode = document.createElement('div');
+//     emptyNode.classList.add('black');
+//     emptyNode.classList.add('line');
+//     let emptyNode2 = document.createElement('div');
+//     emptyNode2.classList.add('black');
+//     emptyNode2.classList.add('line');
+//     parent.append(redNode, emptyNode, emptyNode2)
+// };
+
 function selectNextHole() {
     selectedHole = colums[colNum].childNodes[num++];
     reselect(selectedHole);

@@ -25,10 +25,24 @@ div {
 }
 .downSwitch {
     position: fixed;
+    left: .7rem;
+    top: 8rem;    
+    transform: rotate(90deg);
+}
+.gridTog {
+    position: fixed;
     left: 1rem;
     top: 5rem;    
-    transform: rotate(90deg);
-    cursor: pointer;
+}
+.dotChange {
+    position: fixed;
+    left: 1rem;
+    top: 12rem;    
+}
+.lineChange {
+    position: fixed;
+    left: 1rem;
+    top: 16rem;    
 }
 .rotate {
     transform: rotate(0deg);
@@ -44,8 +58,8 @@ div {
     font-size: larger;
     transform: rotate(45deg);
     position: fixed;
-    left: 1rem;
-    top: 1rem;  
+    left: 0;
+    top: 10px;  
 }
 .red {
     background-color: rgb(255, 0, 0);
@@ -59,7 +73,14 @@ div {
 .black {
     background-color: black;
 }
-
+.box {
+    cursor: pointer;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .line {
     height: 100%;
     width: 30%;
