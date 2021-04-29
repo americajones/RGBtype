@@ -434,7 +434,9 @@ document.addEventListener('click', function (e) {
             clear = !clear;
             hole.classList.toggle('border')
         });
-        document.querySelector('.key').classList.toggle('hidden');
+        document.querySelector('.key1').classList.toggle('hidden');
+        document.querySelector('.key2').classList.toggle('hidden');
+        selectedHole.classList.toggle('shh');
     }
 
 });
