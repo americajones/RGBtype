@@ -1,9 +1,11 @@
 const grid = document.querySelector('#grid');
-for (let i = 0; i < 100; i++) {
+let gridWidth = 100;
+let gridHeight = 60;
+for (let i = 0; i < gridWidth; i++) {
     const line = document.createElement('div');
     line.classList.add('column');
     line.classList.add('col' + i);
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < gridHeight; i++) {
         let newHole = document.createElement('div')
         newHole.classList.add('hole');
         newHole.classList.add('border');
@@ -351,19 +353,19 @@ document.addEventListener('keydown', function (e) {
             break
         //vim directions 
         case 'KeyL':
-            selectedHole = columns[colNum++].childNodes[num];
+            selectedHole = columns[++colNum].childNodes[num];
             reselect(selectedHole);
             break
         case 'KeyH':
-            selectedHole = columns[colNum--].childNodes[num];
+            selectedHole = columns[--colNum].childNodes[num];
             reselect(selectedHole);
             break
         case 'KeyK':
-            selectedHole = columns[colNum].childNodes[num--];
+            selectedHole = columns[colNum].childNodes[--num];
             reselect(selectedHole);
             break
         case 'KeyJ':
-            selectedHole = columns[colNum].childNodes[num++];
+            selectedHole = columns[colNum].childNodes[++num];
             reselect(selectedHole);
             break
         case 'Backspace':
@@ -386,13 +388,26 @@ document.addEventListener('keydown', function (e) {
 
 
 function selectNextHole() {
-    selectedHole = columns[colNum].childNodes[num++];
-    reselect(selectedHole);
-}
+    if (num >= gridHeight - 1) {
+        console.log('YO');
+        num = 0;
+        ++colNum;
+        reselect(selectedHole);
+    } else {
+        selectedHole = columns[colNum].childNodes[++num];
+        reselect(selectedHole);
+    }
+};
 function selectNextColumn() {
-    selectedHole = columns[colNum++].childNodes[num];
-    reselect(selectedHole);
-}
+    if (colNum >= gridWidth - 1) {
+        colNum = 0;
+        ++num;
+        reselect(selectedHole);
+    } else {
+        selectedHole = columns[++colNum].childNodes[num];
+        reselect(selectedHole);
+    }
+};
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
