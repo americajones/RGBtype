@@ -382,7 +382,16 @@ document.addEventListener('keydown', function (e) {
             console.log('ARROW');
             downSwitch.classList.add('rotate');
             break
-
+        case 'Enter':
+            if (down === true) {
+                ++colNum;
+                num = 0
+                reselect(selectedHole);
+            } else {
+                ++num;
+                colNum = 0;
+                reselect(selectedHole);
+            }
     }
 });
 
