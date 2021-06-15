@@ -1,6 +1,7 @@
 const grid = document.querySelector('#grid');
 let gridWidth = 100;
 let gridHeight = 60;
+
 for (let i = 0; i < gridWidth; i++) {
     const line = document.createElement('div');
     line.classList.add('column');

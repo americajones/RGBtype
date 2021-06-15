@@ -23,48 +23,48 @@ body {
     width: 8px;
     display: flex;
     flex-direction: row;
-    border: .5px solid black;
+    border: .3px solid black;
 }
 .downSwitch {
-    position: fixed;
+    position: absolute;
     left: .7rem;
     top: 8rem;    
     transform: rotate(90deg);
 }
 .gridTog {
-    position: fixed;
+    position: absolute;
     left: 1rem;
     top: 5rem;    
 }
 .dotChange {
-    position: fixed;
+    position: absolute;
     left: 1rem;
     top: 12rem;    
 }
 .lineChange {
-    position: fixed;
+    position: absolute;
     left: 1rem;
     top: 16rem;    
-}
-.rotate {
-    transform: rotate(0deg);
-}
-.border {
-    border: .5px solid rgb(25, 25, 25);
-}
-.selected {
-    border: .5px solid rgb(151, 151, 151);
-}
-.shh {
-    border: .5px solid rgb(25, 25, 25);
 }
 .clear {
     cursor: pointer;
     font-size: larger;
     transform: rotate(45deg);
     position: fixed;
-    left: 0;
-    top: 10px;  
+    left: .5rem;
+    top: 1rem;  
+}
+.rotate {
+    transform: rotate(0deg);
+}
+.border {
+    border: .3px solid rgb(25, 25, 25);
+}
+.selected {
+    border: .3px solid rgb(151, 151, 151);
+}
+.shh {
+    border: .3px solid rgb(25, 25, 25);
 }
 .red {
     background-color: rgb(255, 0, 0);
@@ -103,6 +103,7 @@ img.key {
     width: 666px;
 }
 .key.key2{
+    width: 500px;
     margin-top: .5em;
     color: rgb(0, 0, 255);
     font-family: 'Courier New', Courier, monospace;
